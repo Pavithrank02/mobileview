@@ -173,22 +173,25 @@ export const AppCss = {
     height: '100vh',
     display: 'flex',
     flexDirection: 'row',
-    // '@media (max-width:600px)': {
-    //   display: 'flex',
-    //   flexDirection: 'column',
-    //   height: '100%',
-    //   width: '100vw'
-    // },
+    '@media (max-width:600px)': {
+      display: 'flex',
+      flexDirection: 'column',
+      height: '100%',
+      width: '100vw'
+    },
 
   },
   innerGrid: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    // '@media (max-width:600px)': {
-    //   width: '100vw',
-    //   marginTop: '10vh',
-    // },
+    backgroundColor: 'black',
+
+    '@media (max-width:600px)': {
+      width: '100vw',
+      marginTop: '15vh',
+      flexDirection: 'row'
+    },
 
   },
   innerGrid2: {
@@ -202,6 +205,99 @@ export const AppCss = {
 
   }
 }
+export const SideNavCss = {
+
+  outerGridCss: {
+    position: 'fixed',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textDecoration: 'none',
+    height: '100vh',
+    width: '25vw',
+    zIndex: "9999",
+    '@media (max-width:600px)': {
+      height: '15vh',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      width: '100vw',
+      padding: '10px'
+
+    },
+
+  },
+
+  textTransition: {
+    padding: '1rem',
+    color: '#B0B0B0',
+    textDecoration: 'none',
+    transition: 'transform 0.1s', // Add a smooth transition for the transform effect
+    ":hover": {
+      transform: 'scale(1.2)',
+    }
+  },
+  IconStyle: {
+    marginBottom: '-4px',
+    marginRight: '5px'
+  },
+
+  linkGrid: {
+    cursor: 'pointer',
+    textAlign: 'center',
+    '@media (max-width:600px)': {
+      cursor: 'pointer',
+      display: 'flex',
+
+    },
+
+  },
+  innerGrid: {
+    textDecoration: 'none',
+    textAlign: 'center',
+
+    // '@media (max-width:600px)': {
+    //   display: 'none'
+    // },
+
+  },
+  h3Variant: {
+    maxWidth: '100%',
+    width: '100%',
+    '@media (max-width: 768px)': {
+      textAlign: 'center', // Center alignment on medium screens
+      fontSize: '26px', // Slightly smaller text on medium screens
+    },
+    // '@media (max-width:600px)': {
+    //   display: 'none'
+    // },
+  },
+  CopyGrid: {
+    padding: '1rem',
+    '@media (max-width:600px)': {
+      display: 'none'
+    },
+  },
+  bodyVariant: {
+    maxWidth: '100%',
+    width: '100%',
+    textAlign: 'center',
+    '@media (max-width: 900px)': {
+      // Center alignment on medium screens
+      fontSize: '22px', // Slightly smaller text on medium screens
+    },
+    '@media (max-width: 768px)': {
+      // Center alignment on medium screens
+      fontSize: '20px', // Slightly smaller text on medium screens
+    },
+    '@media (max-width:600px)': {
+      fontSize: '20px',
+    },
+
+  }
+}
+
 export const HomeDetailsCss = {
   customBorder: {
     border: '1px solid red',
@@ -218,9 +314,14 @@ export const HomeDetailsCss = {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    flexWrap: 'wrap',
+    width: '75vw',
+    height: '100vh',
+    marginLeft: '25vw',
     '@media (max-width:600px)': {
-      marginTop: '10vh'
+      flexDirection: 'column',
+      marginTop: '20vh',
+      width: '25vw',
+      height: '100vh',
     },
   },
   imageSize: {
@@ -258,98 +359,6 @@ export const HomeDetailsCss = {
 
 };
 
-// Note: The above usage is just an example. Adapt it based on your actual component structure and styling approach.
-
-// Add more styles as needed
-
-export const SideNavCss = {
-
-  outerGridCss: {
-    position: 'fixed',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    textDecoration: 'none',
-    height: '100vh',
-    width: '25vw',
-    // '@media (max-width:600px)': {
-    //   height: '5vh',
-    //   display: 'flex',
-    //   flexDirection: 'row',
-    //   width: '100vw',
-    // },
-
-  },
-
-  textTransition: {
-    padding: '1rem',
-    color: '#B0B0B0',
-    textDecoration: 'none',
-    transition: 'transform 0.1s', // Add a smooth transition for the transform effect
-    ":hover": {
-      transform: 'scale(1.2)',
-    }
-  },
-  IconStyle: {
-    marginBottom: '-4px',
-    marginRight: '5px'
-  },
-
-  linkGrid: {
-    cursor: 'pointer',
-    textAlign: 'center',
-    '@media (max-width:600px)': {
-      cursor: 'pointer',
-      // display: 'flex',
-
-    },
-
-  },
-  innerGrid: {
-    textDecoration: 'none',
-    textAlign: 'center',
-
-    // '@media (max-width:600px)': {
-    //   display: 'none'
-    // },
-
-  },
-  h3Variant: {
-    maxWidth: '100%',
-    width: '100%',
-    '@media (max-width: 768px)': {
-      textAlign: 'center', // Center alignment on medium screens
-      fontSize: '26px', // Slightly smaller text on medium screens
-    },
-    // '@media (max-width:600px)': {
-    //   display: 'none'
-    // },
-  },
-  CopyGrid: {
-    padding: '1rem',
-    // '@media (max-width:600px)': {
-    //   display: 'none'
-    // },
-  },
-  bodyVariant: {
-    maxWidth: '100%',
-    width: '100%',
-    textAlign: 'center',
-    '@media (max-width: 900px)': {
-      // Center alignment on medium screens
-      fontSize: '22px', // Slightly smaller text on medium screens
-    },
-    '@media (max-width: 768px)': {
-      // Center alignment on medium screens
-      fontSize: '20px', // Slightly smaller text on medium screens
-    },
-    '@media (max-width:600px)': {
-      fontSize: '20px',
-    },
-
-  }
-}
 export const AboutCss = {
   outerGrid: {
     display: 'flex',
@@ -373,6 +382,7 @@ export const AboutCss = {
     justifyContent: 'space-evenly',
     alignItems: 'flex-start',
     height: '100vh',
+
   },
 
   item2Grid: {

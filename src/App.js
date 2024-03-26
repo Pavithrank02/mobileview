@@ -15,30 +15,24 @@ function App() {
   const { theme } = useTheme();
 
   return (
-    <Grid container xs={12}
+    <Grid
       sx={{ ...AppCss.outerGrid }}
     >
-      <Grid item xs={3}
-        sx={{ ...AppCss.innerGrid2 }}
-        style={{ background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white' }}
-      >
-        <SideNav />
-      </Grid>
-      <Grid item xs={9}
+      <SideNav />
+      <Grid item
+
         style={{ background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }}
         sx={{ ...AppCss.innerGrid }}
       >
-        <Grid item>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/project' element={<Project />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/service' element={<Service />} />
-          </Routes>
-        </Grid>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          {/* <Route path='/project' element={<Project />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/service' element={<Service />} /> */}
+        </Routes>
       </Grid>
-    </Grid >
+    </Grid>
   );
 }
 
