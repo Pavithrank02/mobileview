@@ -24,7 +24,7 @@ function App() {
       }}
     >
       {/* SideNav - Make it take full width on xs screens and auto height */}
-      <Grid item xs={12} md={3}
+      <Grid item xs={12} md={3} sm={3}
         sx={{
           background: theme === 'light' ? '#FFF' : 'black',
           color: theme === 'light' ? 'black' : 'white',
@@ -39,7 +39,7 @@ function App() {
       </Grid>
 
       {/* Main content - Allow it to be pushed to the right on md screens and up */}
-      <Grid item xs={12} md={9}
+      <Grid item xs={12} md={9} sm={9}
         sx={{
           background: theme === 'light' ? '#F7F7F7' : '#131314',
           color: theme === 'light' ? 'black' : '#FAFAFA',
