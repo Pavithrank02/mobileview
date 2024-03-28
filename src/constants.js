@@ -219,6 +219,15 @@ export const SideNavCss = {
     height: '100vh',
     width: '25vw',
     zIndex: "9999",
+    '@media (max-width:768px)': {
+      height: '15vh',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      width: '100vw',
+      padding: '10px'
+
+    },
     '@media (max-width:600px)': {
       height: '15vh',
       display: 'flex',
@@ -248,6 +257,11 @@ export const SideNavCss = {
   linkGrid: {
     cursor: 'pointer',
     textAlign: 'center',
+    '@media (max-width:968px)': {
+      cursor: 'pointer',
+      display: 'flex',
+
+    },
     '@media (max-width:600px)': {
       cursor: 'pointer',
       display: 'flex',
@@ -259,9 +273,9 @@ export const SideNavCss = {
     textDecoration: 'none',
     textAlign: 'center',
 
-    // '@media (max-width:600px)': {
-    //   display: 'none'
-    // },
+    '@media (max-width:768px)': {
+      display: 'none'
+    },
 
   },
   h3Variant: {
@@ -277,6 +291,9 @@ export const SideNavCss = {
   },
   CopyGrid: {
     padding: '1rem',
+    '@media (max-width:768px)': {
+      display: 'none'
+    },
     '@media (max-width:600px)': {
       display: 'none'
     },
@@ -486,7 +503,8 @@ export const AboutCss = {
   },
   testimonyGrid2: {
     '@media (max-width:509px)': {
-      height: "30vh"
+      // height: "30vh"
+      width: '50vw'
     },
 
 
@@ -503,8 +521,10 @@ export const AboutCss = {
   },
   testimonyGrid4: { display: 'flex', flexDirection: 'row', justifyContent: 'left', marginBottom: '10px' },
   perSonalDetailGrid: {
-    width: '65vw', borderBottom: '1px solid gray', '@media (max-width:509px)': {
-      height: "100%"
+    width: '65vw',
+    borderBottom: '1px solid gray',
+    '@media (max-width:509px)': {
+      // height: "100%"
     },
   }
 }
