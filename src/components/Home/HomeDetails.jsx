@@ -16,7 +16,7 @@ const HomeDetails = () => {
       container
       variants={HomeDetailsCss.containerVariants}
     >
-      <Grid item sx={{ ...HomeDetailsCss.outerGrid }}>
+      <Grid xs={12} item sx={{ ...HomeDetailsCss.outerGrid }}>
         <Grid sx={{ ...HomeDetailsCss.lottieGrid }}>
           <Lottie
             animationData={animationData}
@@ -52,7 +52,7 @@ const HomeDetails = () => {
             ))}
           </Typography> */}
           </Grid>
-          <Grid style={{}} sx={{ ...HomeDetailsCss.iconStyle }}>
+          <Grid sx={{ ...HomeDetailsCss.iconStyle }}>
             <IconButton color="inherit" >
               <GitHub />
             </IconButton>

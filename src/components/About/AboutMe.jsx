@@ -27,7 +27,7 @@ const AboutMe = () => {
       <Grid
         container
         style={AboutCss.outerGrid}
-        xs={12}
+
       >
         <Grid item
           style={AboutCss.item1Grid}

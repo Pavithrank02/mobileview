@@ -168,45 +168,43 @@ export const ServicesProvided = [
   },
 ]
 
-// export const AppCss = {
-//   outerGrid: {
-//     height: '100vh',
-//     display: 'flex',
-//     flexDirection: 'row',
-//     '@media (max-width:600px)': {
-//       display: 'flex',
-//       flexDirection: 'column',
-//       height: '100%',
-//       width: '100vw'
-//     },
+export const AppCss = {
+  //   outerGrid: {
+  //     height: '100vh',
+  //     display: 'flex',
+  //     flexDirection: 'row',
+  //     '@media (max-width:600px)': {
+  //       display: 'flex',
+  //       flexDirection: 'column',
+  //       height: '100%',
+  //       width: '100vw'
+  //     },
 
-//   },
-//   innerGrid: {
-//     display: 'flex',
-//     flexDirection: 'column',
-//     justifyContent: 'center',
-//     backgroundColor: 'black',
-//     width: '75vw',
-//     marginLeft: '25vw',
-//     '@media (max-width:600px)': {
-//       width: '100vw',
-//       marginTop: '15vh',
-//       flexDirection: 'row',
-//       marginLeft: '-25vw',
-//     },
+  //   },
+  //   innerGrid: {
+  //     display: 'flex',
+  //     flexDirection: 'column',
+  //     justifyContent: 'center',
+  //     backgroundColor: 'black',
+  //     width: '75vw',
+  //     marginLeft: '25vw',
+  //     '@media (max-width:600px)': {
+  //       width: '100vw',
+  //       marginTop: '15vh',
+  //       flexDirection: 'row',
+  //       marginLeft: '-25vw',
+  //     },
 
-//   },
-//   innerGrid2: {
+  //   },
+  innerGrid: {
 
-//     // '@media (max-width:600px)': {
-//     //   display: 'flex',
-//     //   flexDirection: 'row',
-//     //   justifyContent: 'center',
-//     //   height: '6vh',
-//     // },
+    '@media (max-width:968px)': {
+      maxWidth: '100%',
+      marginLeft: '0'
+    },
 
-//   }
-// }
+  }
+}
 export const SideNavCss = {
 
   outerGridCss: {
@@ -219,11 +217,29 @@ export const SideNavCss = {
     height: '100vh',
     width: '25vw',
     zIndex: "9999",
+    '@media (max-width:968px)': {
+      height: '15vh',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-evenly',
+      width: '100vw',
+      padding: '10px'
+
+    },
+    '@media (max-width:900px)': {
+      height: '15vh',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-evenly',
+      width: '100vw',
+      padding: '10px'
+
+    },
     '@media (max-width:768px)': {
       height: '15vh',
       display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
+      flexDirection: 'row',
+      justifyContent: 'space-evenly',
       width: '100vw',
       padding: '10px'
 
@@ -281,6 +297,14 @@ export const SideNavCss = {
   h3Variant: {
     maxWidth: '100%',
     width: '100%',
+    '@media (max-width: 1270px)': {
+      textAlign: 'center', // Center alignment on medium screens
+      fontSize: '26px', // Slightly smaller text on medium screens
+    },
+    '@media (max-width: 900px)': {
+      textAlign: 'center', // Center alignment on medium screens
+      fontSize: '26px', // Slightly smaller text on medium screens
+    },
     '@media (max-width: 768px)': {
       textAlign: 'center', // Center alignment on medium screens
       fontSize: '26px', // Slightly smaller text on medium screens
@@ -291,6 +315,12 @@ export const SideNavCss = {
   },
   CopyGrid: {
     padding: '1rem',
+    '@media (max-width:968px)': {
+      display: 'none'
+    },
+    '@media (max-width:900px)': {
+      display: 'none'
+    },
     '@media (max-width:768px)': {
       display: 'none'
     },
@@ -334,6 +364,11 @@ export const HomeDetailsCss = {
     justifyContent: 'space-evenly',
     alignItems: 'center',
     height: '100vh',
+    '@media (max-width:768px)': {
+      flexDirection: 'column',
+      justifyContent: 'space-around',
+      width: '100vw',
+    },
     '@media (max-width:600px)': {
       flexDirection: 'column',
       justifyContent: 'space-around',
@@ -359,7 +394,7 @@ export const HomeDetailsCss = {
     objectFit: 'cover',
   },
   imageGrid: {
-    marginLeft: '10px',
+    // marginLeft: '10px',
   },
   h2Variants: {
     fontWeight: 800,
@@ -411,8 +446,10 @@ export const AboutCss = {
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    overflow: "hidden",
-
+    // width: '73.5vw',
+    '@media (max-width:600px)': {
+      width: '100vw',
+    },
   },
   PersonGrid: {
     display: 'flex',
@@ -457,6 +494,7 @@ export const AboutCss = {
     flexDirection: 'column',
     justifyContent: 'space-evenly',
     alignItems: 'center',
+
     '@media (max-width: 768px)': {
       // Center alignment on medium screens
       height: '100vh',
@@ -491,11 +529,11 @@ export const AboutCss = {
     height: '40vh',
     width: '100%',
 
-
   },
   testimonyGrid: {
     width: '90%',
     textAlign: 'center',
+
     '@media (max-width:509px)': {
       width: '70vw'
 
@@ -503,7 +541,7 @@ export const AboutCss = {
   },
   testimonyGrid2: {
     '@media (max-width:509px)': {
-      // height: "30vh"
+      height: "30vh",
       width: '50vw'
     },
 
@@ -524,7 +562,7 @@ export const AboutCss = {
     width: '65vw',
     borderBottom: '1px solid gray',
     '@media (max-width:509px)': {
-      // height: "100%"
+      height: "100%"
     },
   }
 }
