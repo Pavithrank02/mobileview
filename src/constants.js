@@ -620,7 +620,8 @@ export const ServicesCss = {
     justifyContent: 'space-around',
     color: 'white',
     marginLeft: '8vw',
-    marginTop: '15vh'
+    marginTop: '15vh',
+    width: '100vw'
   },
   textGrid: {
     marginBottom: '5vh'
@@ -633,7 +634,19 @@ export const ServicesCss = {
 
   },
 
+  head: {
+    padding: '0.8rem',
+    width: '5vw',
+    marginBottom: '10px',
+    '@media (max-width: 600px)': {
+      // flexDirection: 'row', // Stack items vertically on mobile
+      width: '15vw',
+    }
+  },
+
   serviceGrid: {
+
+    // width: '20vw',
     padding: '1.3rem',
     backgroundColor: '#333333',
     marginRight: '40px',
