@@ -25,22 +25,22 @@ const ProjectContainer = () => {
           </Typography>
         </Grid>
         <Grid item sx={{ ...ProjectContainerCss.innerGrid2 }}>
-          <Grid xs={5}>
+          <Grid >
             <ProjectCard img={img} />
           </Grid>
-          <Grid xs={5}>
+          <Grid >
             <ProjectCard img={img} />
           </Grid>
-          <Grid xs={5}>
+          <Grid >
             <ProjectCard img={img} />
           </Grid>
-          <Grid xs={5}>
+          <Grid >
             <ProjectCard img={img} />
           </Grid>
-          <Grid xs={5}>
+          <Grid >
             <ProjectCard img={img} />
           </Grid>
-          <Grid xs={5}>
+          <Grid >
             <ProjectCard img={img} />
           </Grid>
 
