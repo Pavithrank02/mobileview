@@ -5,6 +5,10 @@ import { styled } from '@mui/system';
 import { motion } from 'framer-motion';
 
 const StyledForm = styled(motion.form)({
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+
   maxWidth: '700px',
   margin: '0 auto',
   padding: '20px',
@@ -44,7 +48,9 @@ const Contact = () => {
 
   return (
     <>
-      <Grid style={{ color: 'black' }}>
+      <Grid style={{ color: 'black' }}
+        sx={{ marginTop: '20vh', }}
+      >
         <StyledForm
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
