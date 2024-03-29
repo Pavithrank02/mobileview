@@ -628,7 +628,8 @@ export const ServicesCss = {
     color: 'white',
     marginLeft: '8vw',
     marginTop: '15vh',
-    width: '100vw'
+    width: '100vw',
+
   },
   textGrid: {
     marginBottom: '5vh'
@@ -645,6 +646,18 @@ export const ServicesCss = {
     padding: '0.8rem',
     width: '5vw',
     marginBottom: '10px',
+    '@media (max-width: 968px)': {
+      // flexDirection: 'row', // Stack items vertically on mobile
+      width: '15vw',
+    },
+    '@media (max-width: 900px)': {
+      // flexDirection: 'row', // Stack items vertically on mobile
+      width: '15vw',
+    },
+    '@media (max-width: 768px)': {
+      // flexDirection: 'row', // Stack items vertically on mobile
+      width: '15vw',
+    },
     '@media (max-width: 600px)': {
       // flexDirection: 'row', // Stack items vertically on mobile
       width: '15vw',
@@ -652,7 +665,6 @@ export const ServicesCss = {
   },
 
   serviceGrid: {
-
     // width: '20vw',
     padding: '1.3rem',
     backgroundColor: '#333333',
