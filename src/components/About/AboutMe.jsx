@@ -26,11 +26,11 @@ const AboutMe = () => {
 
       <Grid
         container
-        style={AboutCss.outerGrid}
+        sx={{ ...AboutCss.outerGrid }}
 
       >
         <Grid item
-          style={AboutCss.item1Grid}
+          sx={{ ...AboutCss.item1Grid }}
         >
           <Grid>
             <Typography

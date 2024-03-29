@@ -236,7 +236,7 @@ export const SideNavCss = {
 
     },
     '@media (max-width:768px)': {
-      height: '15vh',
+      height: '12vh',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-evenly',
@@ -444,11 +444,12 @@ export const AboutCss = {
   outerGrid: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     // width: '73.5vw',
     '@media (max-width:600px)': {
-      width: '100vw',
+      width: '100%',
+      marginTop: '10vh'
     },
   },
   PersonGrid: {
@@ -473,7 +474,9 @@ export const AboutCss = {
     width: '65vw',
     height: '70vh',
     objectFit: 'cover',
-
+    '@media (max-width:600px)': {
+      width: '50vw',
+    },
   },
   h6Variant: {
     padding: '0.8rem',
@@ -482,9 +485,12 @@ export const AboutCss = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     height: '100vh',
-
+    '@media (max-width:600px)': {
+      width: '90vw',
+      height: '100vh',
+    },
   },
 
   item2Grid: {
@@ -586,6 +592,7 @@ export const ProjectContainerCss = {
       marginLeft: '0', // Adjust for smaller screens
       padding: '5px', // Optional, adjust padding for smaller screens
       marginTop: '15vh',
+      alignItems: 'center',
     }
   },
   innerGrid1: {
@@ -653,5 +660,15 @@ export const ServicesCss = {
     marginBottom: '40px',
 
   },
+
+}
+export const ContactCss = {
+  contactForm: {
+    marginTop: '20vh',
+    '@media (max-width: 768px)': {
+      // flexDirection: 'row', // Stack items vertically on mobile
+
+    }
+  }
 
 }

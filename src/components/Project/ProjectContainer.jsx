@@ -18,8 +18,8 @@ const ProjectContainer = () => {
     >
       <Grid container sx={{ ...ProjectContainerCss.outerGrid }}>
         <Grid item
-          sx={{ background: theme === 'light' ? '#FFF' : '#292828', color: theme === 'light' ? 'black' : '#B0B0B0' }}
-          style={ProjectContainerCss.innerGrid1}>
+          sx={{ ...ProjectContainerCss.innerGrid1, background: theme === 'light' ? '#FFF' : '#292828', color: theme === 'light' ? 'black' : '#B0B0B0' }}
+        >
           <Typography variant='h5'>
             My Project
           </Typography>

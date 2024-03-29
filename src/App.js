@@ -19,13 +19,13 @@ function App() {
     <Grid container
       sx={{
         display: 'flex',
-        // flexDirection: { xs: 'column', md: 'row', sm: 'column', lg: 'column' }, // Column layout for xs, row layout for md and up
+        flexDirection: { xs: 'column', md: 'row', sm: 'column', lg: 'column' }, // Column layout for xs, row layout for md and up
         width: '100%',
         minHeight: '100vh', // Ensure it covers at least the full height of the viewport
       }}
     >
       {/* SideNav - Make it take full width on xs screens and auto height */}
-      <Grid item xs={12} md={12} sm={3}
+      <Grid item xs={12} sm={3}
         sx={{
           background: theme === 'light' ? '#FFF' : 'black',
           color: theme === 'light' ? 'black' : 'white',
@@ -40,7 +40,7 @@ function App() {
       </Grid>
 
       {/* Main content - Allow it to be pushed to the right on md screens and up */}
-      <Grid item xs={12} md={9} sm={9}
+      <Grid item xs={12} sm={9}
         sx={{
           background: theme === 'light' ? '#F7F7F7' : '#131314',
           color: theme === 'light' ? 'black' : '#FAFAFA',
