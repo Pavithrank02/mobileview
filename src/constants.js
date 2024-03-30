@@ -169,35 +169,46 @@ export const ServicesProvided = [
 ]
 
 export const AppCss = {
-  //   outerGrid: {
-  //     height: '100vh',
-  //     display: 'flex',
-  //     flexDirection: 'row',
-  //     '@media (max-width:600px)': {
-  //       display: 'flex',
-  //       flexDirection: 'column',
-  //       height: '100%',
-  //       width: '100vw'
-  //     },
+  outerGrid: {
 
-  //   },
-  //   innerGrid: {
-  //     display: 'flex',
-  //     flexDirection: 'column',
-  //     justifyContent: 'center',
-  //     backgroundColor: 'black',
-  //     width: '75vw',
-  //     marginLeft: '25vw',
-  //     '@media (max-width:600px)': {
-  //       width: '100vw',
-  //       marginTop: '15vh',
-  //       flexDirection: 'row',
-  //       marginLeft: '-25vw',
-  //     },
+    display: 'flex',
+    flexDirection: { xs: 'column', md: 'row', sm: 'column', lg: 'column' }, // Column layout for xs, row layout for md and up
+    width: '100%',
+    minHeight: '100vh',
+    //     height: '100vh',
+    //     display: 'flex',
+    //     flexDirection: 'row',
+    //     '@media (max-width:600px)': {
+    //       display: 'flex',
+    //       flexDirection: 'column',
+    //       height: '100%',
+    //       width: '100vw'
+    //     },
 
-  //   },
+  },
   innerGrid: {
+    position: { md: 'fixed' },
+    height: { xs: 'auto', }, // Full height only on md screens and up
+    width: { lg: '25vw' }, // Fixed width for md screens and up
+    zIndex: 1, // Ensure it sits above other content
+    //     display: 'flex',
+    //     flexDirection: 'column',
+    //     justifyContent: 'center',
+    //     backgroundColor: 'black',
+    //     width: '75vw',
+    //     marginLeft: '25vw',
+    //     '@media (max-width:600px)': {
+    //       width: '100vw',
+    //       marginTop: '15vh',
+    //       flexDirection: 'row',
+    //       marginLeft: '-25vw',
+    //     },
 
+  },
+  innerGrid2: {
+    marginLeft: { md: '25vw', }, // Compensate for the SideNav width on md screens and up
+    width: { xs: '100%', }, // Ensure it uses the correct width based on the screen size
+    minHeight: '100vh',
     '@media (max-width:968px)': {
       maxWidth: '100%',
       marginLeft: '0'
@@ -616,6 +627,29 @@ export const ProjectContainerCss = {
       alignItems: 'center',
       color: 'red' // Center items if needed
     }
+  },
+  description: {
+    display: 'flex',
+    flexDirection: "column",
+    width: "30vw",
+    '@media (max-width: 600px)': {
+      // flexDirection: 'row', // Stack items vertically on mobile
+      width: "70vw",
+    }
+  },
+  descriptionOuter: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    '@media (max-width: 600px)': {
+      // flexDirection: 'row', // Stack items vertically on mobile
+      width: "70vw",
+    }
+  },
+  descriptionImage: {
+    width: "70vw",
+    textAlign: 'justify'
   },
 }
 
