@@ -218,7 +218,7 @@ export const SideNavCss = {
     width: '25vw',
     zIndex: "9999",
     '@media (max-width:968px)': {
-      height: '15vh',
+      height: '10vh',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-evenly',
@@ -227,7 +227,7 @@ export const SideNavCss = {
 
     },
     '@media (max-width:900px)': {
-      height: '15vh',
+      height: '10vh',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-evenly',
