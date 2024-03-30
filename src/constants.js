@@ -470,6 +470,8 @@ export const AboutCss = {
     alignItems: 'center',
     '@media (max-width:600px)': {
       flexDirection: 'column',
+      justifyContent: 'space-around',
+      height: '100%',
     },
   },
   Persons: {
@@ -552,14 +554,17 @@ export const AboutCss = {
     textAlign: 'center',
 
     '@media (max-width:509px)': {
-      width: '70vw'
+      width: '70vw',
+      height: '100%',
 
     },
   },
   testimonyGrid2: {
+    height: "25vh",
+    marginLeft: '30px',
     '@media (max-width:509px)': {
-      height: "30vh",
-      width: '50vw'
+      height: "35vh",
+
     },
 
 
@@ -573,12 +578,17 @@ export const AboutCss = {
     padding: '10px',
     backgroundColor: 'transparent',
     border: '1px solid gray',
+    '@media (max-width:509px)': {
+      height: "35vh",
+      width: '60vw',
+
+    },
   },
   testimonyGrid4: { display: 'flex', flexDirection: 'row', justifyContent: 'left', marginBottom: '10px' },
   perSonalDetailGrid: {
     width: '65vw',
     borderBottom: '1px solid gray',
-    '@media (max-width:509px)': {
+    '@media (max-width:600px)': {
       height: "100%"
     },
   }
