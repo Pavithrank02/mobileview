@@ -3,6 +3,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
+import AnimatedTimelineElement from './AnimatedTimelineElement';
 import WorkIcon from '@mui/icons-material/Work';
 import { motion } from 'framer-motion';
 import { useTheme } from '../../ThemeContext';
@@ -22,26 +23,29 @@ const Experience = () => {
       variants={containerVariants}
     >
       <VerticalTimeline>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{
-            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-            color: theme === 'light' ? 'black' : '#FAFAFA',
-          }}
-          contentArrowStyle={{ borderRight: '7px solid black' }}
-          date="2011 - present"
-          iconStyle={{
-            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-            color: theme === 'light' ? 'black' : '#FAFAFA',
-          }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Creative Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-          <p style={{ color: '#B0B0B0' }}>
-            Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-          </p>
-        </VerticalTimelineElement>
+        <AnimatedTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{
+              background: theme === 'light' ? '#F7F7F7 ' : '#131314',
+              color: theme === 'light' ? 'black' : '#FAFAFA',
+            }}
+            contentArrowStyle={{ borderRight: '7px solid black' }}
+            date="2011 - present"
+            iconStyle={{
+              background: theme === 'light' ? '#F7F7F7 ' : '#131314',
+              color: theme === 'light' ? 'black' : '#FAFAFA',
+            }}
+            icon={<WorkIcon />}
+          >
+            <h3 className="vertical-timeline-element-title">Creative Director</h3>
+            <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
+            <p style={{ color: '#B0B0B0' }}>
+              Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+            </p>
+          </VerticalTimelineElement>
+        </AnimatedTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="2010 - 2011"
