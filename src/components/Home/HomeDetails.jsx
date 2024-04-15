@@ -16,7 +16,7 @@ const HomeDetails = () => {
       container
       variants={HomeDetailsCss.containerVariants}
     >
-      <Grid xs={12} item sx={{ ...HomeDetailsCss.outerGrid }}>
+      <Grid item sx={{ ...HomeDetailsCss.outerGrid }}>
         <Grid sx={{ ...HomeDetailsCss.lottieGrid }}>
           <Lottie
             animationData={animationData}

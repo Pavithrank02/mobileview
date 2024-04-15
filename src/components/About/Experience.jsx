@@ -1,144 +1,47 @@
-import React, { useEffect, useState } from 'react';
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import SchoolIcon from '@mui/icons-material/School';
-import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
-import AnimatedTimelineElement from './AnimatedTimelineElement';
-import WorkIcon from '@mui/icons-material/Work';
-import { motion } from 'framer-motion';
-import { useTheme } from '../../ThemeContext';
+// src/ExperienceNode.js
+import React, { useState } from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import IconButton from '@mui/material/IconButton';
+import Collapse from '@mui/material/Collapse';
 
-const Experience = () => {
+const ExperienceNode = ({ data }) => {
+  const [expanded, setExpanded] = useState(false);
 
-  const { theme } = useTheme();
-  const containerVariants = {
-    hidden: { opacity: 0, },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
   };
 
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
-      <VerticalTimeline>
-        <AnimatedTimelineElement>
-
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{
-              background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-              color: theme === 'light' ? 'black' : '#FAFAFA',
-            }}
-            contentArrowStyle={{ borderRight: '7px solid black' }}
-            date="2011 - present"
-            iconStyle={{
-              background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-              color: theme === 'light' ? 'black' : '#FAFAFA',
-            }}
-            icon={<WorkIcon />}
+    <Card sx={{ marginBottom: 2, marginLeft: expanded ? 2 : 0 }}>
+      <CardContent>
+        <Typography variant="h6">{data.title}</Typography>
+        <Typography variant="body2" color="text.secondary">
+          {data.description}
+        </Typography>
+        {data.children && (
+          <IconButton
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
           >
-            <h3 className="vertical-timeline-element-title">Creative Director</h3>
-            <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-            <p style={{ color: '#B0B0B0' }}>
-              Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-            </p>
-          </VerticalTimelineElement>
-        </AnimatedTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="2010 - 2011"
-          iconStyle={{
-            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-            color: theme === 'light' ? 'black' : '#FAFAFA',
-          }}
-          icon={<WorkHistoryIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Art Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-          <p>
-            Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="2008 - 2010"
-          iconStyle={{
-            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-            color: theme === 'light' ? 'black' : '#FAFAFA',
-          }}
-          icon={<WorkHistoryIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Web Designer</h3>
-          <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-          <p>
-            User Experience, Visual Design
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="2006 - 2008"
-          iconStyle={{
-            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-            color: theme === 'light' ? 'black' : '#FAFAFA',
-          }}
-          icon={<WorkHistoryIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Web Designer</h3>
-          <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-          <p>
-            User Experience, Visual Design
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="April 2013"
-          iconStyle={{
-            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-            color: theme === 'light' ? 'black' : '#FAFAFA',
-          }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
-          <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-          <p>
-            Strategy, Social Media
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="November 2012"
-          iconStyle={{
-            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-            color: theme === 'light' ? 'black' : '#FAFAFA',
-          }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
-          <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-          <p>
-            Creative Direction, User Experience, Visual Design
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="2002 - 2006"
-          iconStyle={{
-            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-            color: theme === 'light' ? 'black' : '#FAFAFA',
-          }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
-          <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
-          <p>
-            Creative Direction, Visual Design
-          </p>
-        </VerticalTimelineElement>
-      </VerticalTimeline>
-    </motion.div>
-  )
-}
+            <ExpandMoreIcon />
+          </IconButton>
+        )}
+      </CardContent>
+      {data.children && (
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent sx={{ paddingLeft: 4 }}>
+            {data.children.map((child) => (
+              <ExperienceNode key={child.id} data={child} />
+            ))}
+          </CardContent>
+        </Collapse>
+      )}
+    </Card>
+  );
+};
 
-export default Experience
+export default ExperienceNode;
