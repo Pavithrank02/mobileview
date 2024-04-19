@@ -14,7 +14,7 @@ import { AppCss } from './constants';
 function App() {
   const { theme } = useTheme();
 
-  // You can adjust the sx prop directy in your components
+  // You can adjust the sx prop directy in your component
   return (
     <Grid container
       sx={{
